@@ -277,52 +277,46 @@
                 <span class="glyphicon glyphicon-time"></span>
             </a>
         </div>
-    
     </div>
+    
     <div class="row timeline-movement">
-    
         <div class="timeline-badge">
-            <span class="timeline-balloon-date-day">Feb</span>
-            <span class="timeline-balloon-date-month">2014</span>
+            <span class="timeline-balloon-date-day"><spring:message code="message.text.month.November" text="" /></span>
+            <span class="timeline-balloon-date-month"><spring:message code="message.text.year.2014" text="" /></span>
         </div>
-    
     
         <div class="col-sm-6  timeline-item">
             <div class="row">
                 <div class="col-sm-11">
                     <div class="timeline-panel credits">
                         <ul class="timeline-panel-ul">
-                            <li><span class="importo">Mussum ipsum cacilds</span></li>
-                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                            <li><p><small class="text-muted"> 18/02/2014 - Present</small></p> </li>
+                            <li><span class="importo"><spring:message code="message.text.month.wma" text="" /></span></li>
+                            <li><span class="causale"><spring:message code="message.text.month.wmaSen" text="" /> </span> </li>
+                            <li><p><small class="text-muted"> <spring:message code="message.text.month.wmaCur" text="" /></small></p> </li>
                         </ul>
                     </div>
     
                 </div>
             </div>
         </div>
-    
+
         <div class="col-sm-6  timeline-item">
             <div class="row">
                 <div class="col-sm-offset-1 col-sm-11">
                     <div class="timeline-panel debits">
                         <ul class="timeline-panel-ul">
-                            <li><span class="importo">Mussum ipsum cacilds</span></li>
-                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                            <li><p><small class="text-muted"> 18/02/2014 - Present</small></p> </li>
+                            <li><span class="importo"><spring:message code="message.text.mvss" text="" /></span></li>
+                            <li><span class="causale"><spring:message code="message.text.mvssSen" text="" /> </span> </li>
+                            <li><p><small class="text-muted"> <spring:message code="message.text.mvssCur" text="" /></small></p> </li>
                         </ul>
                     </div>
-    
                 </div>
             </div>
         </div>
     </div>
     
-    <!--due -->
-    
+<!-- 
     <div class="row timeline-movement">
-    
-    
         <div class="timeline-badge">
             <span class="timeline-balloon-date-day">Mar</span>
             <span class="timeline-balloon-date-month">2013</span>
@@ -338,7 +332,6 @@
                             <li><p><small class="text-muted"> 10/03/2013 - 18/02/2014</small></p> </li>
                         </ul>
                     </div>
-    
                 </div>
             </div>
         </div>
@@ -353,16 +346,13 @@
                             <li><p><small class="text-muted"> 10/03/2013 - 18/02/2014</small></p> </li>
                         </ul>
                     </div>
-    
                 </div>
             </div>
         </div>
-    
-    
     </div>
+-->
+<!--
     <div class="row timeline-movement">
-    
-    
         <div class="timeline-badge">
             <span class="timeline-balloon-date-day">Jan</span>
             <span class="timeline-balloon-date-month">2010</span>
@@ -397,10 +387,9 @@
                 </div>
             </div>
         </div>
-    
-    
     </div>
-    </div>
+ -->
+    
     </div>
     
     </section>
