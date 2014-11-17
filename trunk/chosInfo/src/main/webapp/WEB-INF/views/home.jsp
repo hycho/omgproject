@@ -128,16 +128,16 @@
                 <!-- item -->
                 <div class="col-md-4 text-center tileBox">
                     <div class="txtHead"><i class="fa fa-css3"></i>
-                    <h3>HTML5/Javascript <span class="id-color">Dev</span></h3></div>
-                    <p>Html5, Javascript, Jquery, AngularJs등 관련 기술을 통해서 동적인 아름다운 화면을 구현하는 것을 해왔으며 현재도 누구든지 생각하고 존재하지만 색다른 것을 구현하기 위해 열심히 달려가는 중입니다.</p>
+                    <h3><spring:message code="message.text.htmlscript" text="" /> <span class="id-color"><spring:message code="message.text.dev" text="" /></span></h3></div>
+                    <p><spring:message code="message.text.devSen" text="" /></p>
                 </div>
                 <!-- end: -->
 
                 <!-- item -->
                 <div class="col-md-4 text-center tileBox">
                     <div class="txtHead"><i class="fa fa-lightbulb-o"></i>
-                    <h3>Oracle/MySql <span class="id-color">DataBase</span></h3></div>
-                    <p>주 DataBase는 Oracle이며 Mysql도 사용할 수 있습니다, 특정 서비스에 따른 모델링도 직접하며 검색에 관한 Index를 생성하고 퍼포먼스 있는 환경을 구성합니다.</p>
+                    <h3><spring:message code="message.text.oraclemysql" text="" /> <span class="id-color"><spring:message code="message.text.database" text="" /></span></h3></div>
+                    <p><spring:message code="message.text.databaseSen" text="" /></p>
                 </div>
                 <!-- end: -->
             </div>
@@ -147,7 +147,7 @@
     <section id="quote" class="bg-parlex">
         <div class="parlex-back">
             <div class="container secPad text-center">
-				<h2>If I asked people what they wanted, they would have said ‘Faster Horses’.</h2><h3>-Henry Ford</h3>
+				<h2><spring:message code="message.text.wiseSaying1" text="" /></h2><h3>-<spring:message code="message.text.wiseSayinger1" text="" /></h3>
             </div>
             <!--/.container-->
         </div>
@@ -158,89 +158,97 @@
     	<div class="container">
         <div class="heading text-center">
                 <!-- Heading -->
-                <h2>My Skills</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                <h2><spring:message code="message.text.myskills" text="" /></h2>
+                <p><spring:message code="message.text.myskillsSen" text="" /></p>
             </div>
         	<div class="row">
                 <div class="col-sm-6">
-                    <h2>Programming <strong>Skills</strong></h2>
+                    <h2><spring:message code="message.text.Programming" text="" /> <strong><spring:message code="message.text.h.skills" text="" /></strong></h2>
                     <p class="mrgBtm20">
-                        It takes knowledge, smart work, and dedication to make great ideas come to life. I have been helping make great ideas happen for the past 7 years and am always ready for new challenges.
-                
+						<spring:message code="message.text.skillsSen" text="" />
                     </p>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">HTML5</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.java" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                    <span class="sr-only">90% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                    <span class="sr-only">50% Complete</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">CSS/CC3</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.htmlscript" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                    <span class="sr-only">90% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span class="sr-only">60% Complete</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">JavaScript</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.plsql" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                    <span class="sr-only">80% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                    <span class="sr-only">40% Complete</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">jQuery/Ajax</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.Integration" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                    <span class="sr-only">90% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                    <span class="sr-only">50% Complete</span>
                                 </div>
                             </div>
                         </div>
                     </div>      
                 </div>
                 <div class="col-sm-6">
-                    <h2>Designing <strong>Skills</strong></h2>
+                    <h2><spring:message code="message.text.architecture" text="" /> <strong><spring:message code="message.text.h.skills" text="" /></strong></h2>
                     <p class="mrgBtm20">
-                        Problem solving is not always about sitting in a board room talking about the way things should be done. I have a strong background in UI design which allows me to think on my feet and act upon it.
-                
+                    	<spring:message code="message.text.architectureSkillSen" text="" />
                     </p>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">Photoshop</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.architecture.ta" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                    <span class="sr-only">90% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                    <span class="sr-only">25% Complete</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">Illustrator</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.architecture.aa" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                    <span class="sr-only">80% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                    <span class="sr-only">25% Complete</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 skilltitle">Indesign</div>
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.architecture.da" text="" /></div>
                         <div class="col-md-8">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                                    <span class="sr-only">75% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                    <span class="sr-only">30% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle"><spring:message code="message.text.architecture.ea" text="" /></div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                    <span class="sr-only">20% Complete</span>
                                 </div>
                             </div>
                         </div>
@@ -255,8 +263,8 @@
     	<div class="container">     
            <div class="heading text-center">
                 <!-- Heading -->
-                <h2>Professional Experience</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                <h2><spring:message code="message.text.myExperience" text="" /></h2>
+                <p><spring:message code="message.text.myExperienceSen" text="" /></p>
             </div>
         <div id="timeline"><div class="row timeline-movement timeline-movement-top">
         <div class="timeline-badge timeline-future-movement">
