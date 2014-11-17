@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <c:set var="resourcesPath" value="${pageContext.request.contextPath}/resources"/>
@@ -42,22 +44,22 @@
             <nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
                     <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only"><spring:message code="message.text.Tn" text="" /></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand scroll-top logo"><b>Cho's profile</b></a>
+                    <a href="#" class="navbar-brand scroll-top logo"><b><spring:message code="message.text.myprofile" text="" /></b></a>
                 </div>
                 <!--/.navbar-header-->
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav" id="mainNav">
-                        <li class="active"><a href="#home" class="scroll-link">Home</a></li>
-                        <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
-                        <li><a href="#skills" class="scroll-link">Skills</a></li>
-                        <li><a href="#experience" class="scroll-link">Experience</a></li>
-                        <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
-                        <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+                        <li class="active"><a href="#home" class="scroll-link"><spring:message code="message.text.home" text="" /></a></li>
+                        <li><a href="#aboutUs" class="scroll-link"><spring:message code="message.text.aboutUs" text="" /></a></li>
+                        <li><a href="#skills" class="scroll-link"><spring:message code="message.text.skills" text="" /></a></li>
+                        <li><a href="#experience" class="scroll-link"><spring:message code="message.text.experience" text="" /></a></li>
+                        <li><a href="#portfolio" class="scroll-link"><spring:message code="message.text.portfolio" text="" /></a></li>
+                        <li><a href="#contactUs" class="scroll-link"><spring:message code="message.text.contactUs" text="" /></a></li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
@@ -74,23 +76,23 @@
             <div class="container banner-content">
                 <div id="da-slider" class="da-slider">
                     <div class="da-slide">
-                        <h2>Java Developer</h2>
-                        <p>Java라는 언어를 7년간 사용을 해왔으며 새로운것을 Java를 통해 개발하는 것을 좋아함 !!!</p>
+                        <h2><spring:message code="message.text.javaDeveloper" text="" /></h2>
+                        <p><spring:message code="message.text.javaDeveloperSen" text="" /></p>
                         <div class="da-img"></div>
                     </div>
                     <div class="da-slide">
-                        <h2>Server Engineer</h2>
-                        <p>수많은 프로젝트를 거쳐오며 서버관리 및 시스템 구축을 위한 환경을 만드는것도 좋아함 !!!</p>
+                        <h2><spring:message code="message.text.serverEngineer" text="" /></h2>
+                        <p><spring:message code="message.text.serverEngineerSen" text="" /></p>
                         <div class="da-img"></div>
                     </div>
                     <div class="da-slide">
-                        <h2>Web Developer</h2>
-                        <p>새로운 것을 찾고 이것저것 다 해보지만 CSS는 약함 하지만 Bootstrap이나 Angularjs등 디자인, JS 프레임워크를 사용하여 개발 좋아함 !!!</p>
+                        <h2><spring:message code="message.text.webDeveloper" text="" /></h2>
+                        <p><spring:message code="message.text.webDeveloperSen" text="" /></p>
                         <div class="da-img"></div>
                     </div>
                     <div class="da-slide">
-                        <h2>System Architecture</h2>
-                        <p>시스템을 동작시키기 위해서 기획, 설계를 하는 것도 좋아함. 모든지 좋아함 !!!</p>
+                        <h2><spring:message code="message.text.systemArchitecture" text="" /></h2>
+                        <p><spring:message code="message.text.systemArchitectureSen" text="" /></p>
                         <div class="da-img"></div>
                     </div>
                 </div>
@@ -100,8 +102,8 @@
     <section id="introText">
         <div class="container">
             <div class="text-center">
-            <h1>I create beautiful responsive websites, Yes I am a UX geek</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium. Cras posuere dolor risus. Pellentesque elementum ultricies quam, sit amet rhoncus nisl viverra in. Cras imperdiet nisi a euismod molestie. Ut a metus arcu. Pellentesque feugiat dictum erat. Nulla vehicula condimentum purus, quis imperdiet nisl ultricies eleifend. Nulla quis rhoncus risus. Ut vel vehicula urna.</p>
+            <h1><spring:message code="message.text.introText.intro" text="" /></h1>
+              <p><spring:message code="message.text.introText.introSen" text="" /></p>
             </div>
         </div>
 
@@ -111,31 +113,31 @@
         <div class="container">
             <div class="heading text-center">
                 <!-- Heading -->
-                <h2>I am Sam, a UI Designer & developer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <h2><spring:message code="message.text.aboutUs.intro" text="" /></h2>
+                <p><spring:message code="message.text.aboutUs.introSen" text="" /></p>
             </div>
             <div class="row">
                 <!-- item -->
                 <div class="col-md-4 text-center tileBox">
                    <div class="txtHead"> <i class="fa fa-desktop"></i>
-                    <h3>Responsive <span class="id-color">Design</span></h3></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium.</p>
+                    <h3><spring:message code="message.text.java" text="" /> <span class="id-color"><spring:message code="message.text.language" text="" /></span></h3></div>
+                    <p><spring:message code="message.text.languageSen" text="" /></p>
                 </div>
                 <!-- end: -->
 
                 <!-- item -->
                 <div class="col-md-4 text-center tileBox">
                     <div class="txtHead"><i class="fa fa-css3"></i>
-                    <h3>HTML5/CSS3 <span class="id-color">Dev</span></h3></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium.</p>
+                    <h3>HTML5/Javascript <span class="id-color">Dev</span></h3></div>
+                    <p>Html5, Javascript, Jquery, AngularJs등 관련 기술을 통해서 동적인 아름다운 화면을 구현하는 것을 해왔으며 현재도 누구든지 생각하고 존재하지만 색다른 것을 구현하기 위해 열심히 달려가는 중입니다.</p>
                 </div>
                 <!-- end: -->
 
                 <!-- item -->
                 <div class="col-md-4 text-center tileBox">
                     <div class="txtHead"><i class="fa fa-lightbulb-o"></i>
-                    <h3>JavaScript <span class="id-color">jQuery</span></h3></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt volutpat. Cras eget augue id dui varius pretium.</p>
+                    <h3>Oracle/MySql <span class="id-color">DataBase</span></h3></div>
+                    <p>주 DataBase는 Oracle이며 Mysql도 사용할 수 있습니다, 특정 서비스에 따른 모델링도 직접하며 검색에 관한 Index를 생성하고 퍼포먼스 있는 환경을 구성합니다.</p>
                 </div>
                 <!-- end: -->
             </div>
