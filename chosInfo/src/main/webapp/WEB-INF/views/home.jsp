@@ -401,24 +401,24 @@
 
             <div class="heading text-center">
                 <!-- Heading -->
-                <h2>Portfolio</h2>
-                <p>At lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
+                <h2><spring:message code="message.text.Portfolio" text="" /></h2>
+                <p><spring:message code="message.text.PortfolioSen" text="" /></p>
             </div>
 
             <div class="row">
                 <nav id="filter" class="col-md-12 text-center">
                     <ul>
                         <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".webdesign">Web Design</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".photography">Photography</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".print">Print</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".2016">2016</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".2015">2015</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".2014">2014</a></li>
                     </ul>
                 </nav>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="portfolio-items isotopeWrapper clearfix" id="3">
 
-                            <article class="col-sm-4 isotopeItem webdesign">
+                            <article class="col-sm-4 isotopeItem 2016">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img1.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -431,7 +431,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem photography">
+                            <article class="col-sm-4 isotopeItem 2015">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img2.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -445,7 +445,7 @@
                             </article>
 
 
-                            <article class="col-sm-4 isotopeItem photography">
+                            <article class="col-sm-4 isotopeItem 2015">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img3.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -458,7 +458,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem print">
+                            <article class="col-sm-4 isotopeItem 2014">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img4.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -471,7 +471,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem photography">
+                            <article class="col-sm-4 isotopeItem 2015">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img5.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -484,7 +484,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem webdesign">
+                            <article class="col-sm-4 isotopeItem 2016">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img6.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -497,7 +497,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem print">
+                            <article class="col-sm-4 isotopeItem 2014">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img7.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -510,7 +510,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem photography">
+                            <article class="col-sm-4 isotopeItem 2015">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img8.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -523,7 +523,7 @@
                                 </div>
                             </article>
 
-                            <article class="col-sm-4 isotopeItem print">
+                            <article class="col-sm-4 isotopeItem 2014">
                                 <div class="portfolio-item">
                                     <img src="${resourcesPath}/images/portfolio/img9.jpg" alt="" />
                                     <div class="portfolio-desc align-center">
@@ -536,13 +536,9 @@
                                 </div>
                             </article>
                         </div>
-
-                    </div>
-
-
+                   </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -553,8 +549,8 @@
             <div class="row">
                 <div class="heading text-center">
                     <!-- Heading -->
-                    <h2>Let's Keep In Touch!</h2>
-                    <p>Thank you for visiting out my profile. If you would like to get into contact with me, please fill out the form below.</p>
+                    <h2><spring:message code="message.text.togetherSen" text="" /></h2>
+                    <p><spring:message code="message.text.togetherSen" text="" /></p>
                 </div>
             </div>
 
@@ -564,34 +560,34 @@
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name"><spring:message code="message.text.name" text="" /></label>
                             <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email"><spring:message code="message.text.email" text="" /></label>
                             <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="comments">Comments</label>
+                            <label for="comments"><spring:message code="message.text.comments" text="" /></label>
                             <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
                         </div>
-                        <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+                        <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit"><spring:message code="message.text.send" text="" /></button>
                         <div class="result"></div>
                     </div>
                 </form>
                 <div class="col-sm-4">
-                    <h4>Address:</h4>
+                    <h4><spring:message code="message.text.address" text="" />:</h4>
                     <address>
-                        WebThemez Company<br>
-                        134 Stilla. Tae., 414515<br>
-                        Leorislon, SA 02434-34534 USA
+                        <spring:message code="message.text.address.first" text="" /><br>
+                        <spring:message code="message.text.address.second" text="" /><br>
+                        <spring:message code="message.text.address.third" text="" />
                         <br>
                     </address>
-                    <h4>Phone:</h4>
+                    <h4><spring:message code="message.text.address.phone" text="" />:</h4>
                     <address>
-                        12345-49589-2<br>
+                        <spring:message code="message.text.address.phoneNum" text="" /><br>
                     </address>
                 </div>
             </div>
@@ -617,7 +613,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    Copyright 2014 | All Rights Reserved  -- Template by <a href="http://webThemez.com">WebThemez.com</a>
+                    Copyright 2014 | All Rights Reserved  -- Template by <a href="#">Chos.com</a>
                 </div>
             </div>
             <!-- / .row -->
