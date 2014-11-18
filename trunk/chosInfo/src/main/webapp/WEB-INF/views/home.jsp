@@ -290,9 +290,9 @@
                 <div class="col-sm-11">
                     <div class="timeline-panel credits">
                         <ul class="timeline-panel-ul">
-                            <li><span class="importo"><spring:message code="message.text.month.wma" text="" /></span></li>
-                            <li><span class="causale"><spring:message code="message.text.month.wmaSen" text="" /> </span> </li>
-                            <li><p><small class="text-muted"> <spring:message code="message.text.month.wmaCur" text="" /></small></p> </li>
+                            <li><span class="importo"><spring:message code="message.text.wma" text="" /></span></li>
+                            <li><span class="causale"><spring:message code="message.text.wmaSen" text="" /> </span> </li>
+                            <li><p><small class="text-muted"> <spring:message code="message.text.wmaCur" text="" /></small></p> </li>
                         </ul>
                     </div>
     
