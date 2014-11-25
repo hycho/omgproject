@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>kr.co</groupId>
+	<artifactId>mvss</artifactId>
+	<name>MVSS</name>
+	<packaging>war</packaging>
+	<version>1.0.0-BUILD-SNAPSHOT</version>
+	
+	<properties>
+       <org.springframework.spring.version>4.1.2.RELEASE</org.springframework.spring.version>
+       <org.springframework.security.spring-security.version>3.2.3.RELEASE</org.springframework.security.spring-security.version>
+       <ch.qos.logback-version>1.1.2</ch.qos.logback-version>
+       <slf4j-version>1.7.5</slf4j-version>
+       <javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
+       <org.mybatis.mybatis.version>3.2.7</org.mybatis.mybatis.version>
+       <org.mybatis.mybatis-spring.version>1.2.2</org.mybatis.mybatis-spring.version>
+       <org.mysql.connector.version>5.1.18</org.mysql.connector.version>
+       <javax.xml.jaxrpc-api.version>1.1</javax.xml.jaxrpc-api.version>
+       <org.aspectj.aspectjrt.version>1.7.3</org.aspectj.aspectjrt.version>
+       <org.codehaus.jackson.jackson-core-asl.version>1.9.12</org.codehaus.jackson.jackson-core-asl.version>
+       <org.codehaus.jackson.jackson-mapper-asl.version>1.9.12</org.codehaus.jackson.jackson-mapper-asl.version>
+       <org.reflections.reflections>0.9.9-RC1</org.reflections.reflections>
+   </properties>
+
+    <dependencies>
+        <!-- =================================================== -->
+        <!-- springframework (web-application framework) -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${org.springframework.spring.version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- spring-security (authenticate module) -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.security.spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.security.spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${org.springframework.security.spring-security.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-expression</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- logback(logging module) -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${ch.qos.logback-version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- slf4j -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- slf4j -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${javax.servlet.jstl.version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- aspectj (aop module) -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${org.aspectj.aspectjrt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>${org.aspectj.aspectjrt.version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- mybatis (persistance layer framework) -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${org.mybatis.mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${org.mybatis.mybatis-spring.version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- mysql-connector -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${org.mysql.connector.version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- jaxrpc -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jaxrpc-api</artifactId>
+            <version>${javax.xml.jaxrpc-api.version}</version>
+        </dependency>
+
+        <!-- =================================================== -->
+        <!-- RestConverter -->
+        <!-- =================================================== -->
+        <dependency>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-core</artifactId>
+					<version>2.3.0</version>
+				</dependency>
+				
+				<dependency>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-databind</artifactId>
+					<version>2.3.0</version>
+				</dependency>
+<!-- 
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>${org.reflections.reflections}</version>
+        </dependency>
+ -->
+ 
+        <!-- org.json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20140107</version>
+        </dependency>
+        <!-- =================================================== -->
+        <!-- jUnit -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- =================================================== -->
+        <!-- servlet -->
+        <!-- =================================================== -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+                    </additionalProjectnatures>
+                    <additionalBuildcommands>
+                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+                    </additionalBuildcommands>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>org.test.int1.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

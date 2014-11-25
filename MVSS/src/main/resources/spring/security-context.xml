@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:security="http://www.springframework.org/schema/security"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+	
+	<security:global-method-security secured-annotations="enabled" jsr250-annotations="enabled">
+		<!--
+			AspectJ pointcut expression that locates our "post" method and
+			applies security that way <protect-pointcut expression="execution(*
+			bigbank.*Service.post*(..))" access="ROLE_TELLER"/>
+		-->
+	</security:global-method-security>
+
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/resources/**" access="permitAll"/>
+		<security:intercept-url pattern="/login" access="permitAll"/>
+		<security:intercept-url pattern="/join" access="permitAll"/>  
+		<security:intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')"/>
+		
+		<security:form-login login-processing-url="/j_spring_security_check" authentication-failure-url="/login?type=error" default-target-url="/" login-page="/login" />
+		<security:logout logout-success-url="/"/>
+		<security:session-management>
+			<security:concurrency-control max-sessions="1" error-if-maximum-exceeded="false" expired-url="/login?type=expired" />
+		</security:session-management>
+		<security:remember-me key="IAM"/>
+	</security:http>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider user-service-ref="jdbcUserService">
+	<!--
+				<security:password-encoder hash="md5" base64="true"/>
+	-->
+		</security:authentication-provider>
+	</security:authentication-manager>	
+	
+	<bean id="jdbcUserService" class="com.harpy.support.spring.security.customAuth.JdbcUserDetailsManager" >
+		<property name="usersByUsernameQuery" value="SELECT USERID , PASSWORD, 'true' AS ENABLED, FIRSTNAME, LASTNAME, BIRTHYEAR, BIRTHMONTH, BIRTHDAY, SEX, EMAIL, CONTRYCODE, USEYN FROM TB_USER WHERE USERID = ? AND USEYN='Y' "/>
+		<property name="authoritiesByUsernameQuery" value="SELECT USERID , 'ROLE_ADMIN' FROM TB_USER WHERE USERID = ?"/>
+		<property name="dataSource" ref="jdbcDataSource"/>
+		<property name="mapClass" value="com.harpy.support.spring.security.customAuth.MapQueryMapper"/>
+	</bean>
+
+</beans>

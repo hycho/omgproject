@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD iBatis Mapper 3.0 //EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="sampleDao">
+
+	<select id="selectSampleList" parameterType="java.util.Map" resultType="java.util.HashMap">
+		SELECT * FROM TB_SAMPLE
+	</select>
+
+	<insert id="insertSample" parameterType="java.util.Map">
+	  <![CDATA[
+	 		INSERT INTO TB_SAMPLE (
+	 			PID,
+	 			NAME,
+	 			TITLE
+	 		) 
+	 		VALUES (
+				#{pid},
+				#{name},
+				#{title}
+	 		)
+	     ]]>
+	</insert>
+
+	<delete id="deleteSample" parameterType="java.util.Map">
+	  <![CDATA[
+	      DELETE FROM TB_SAMPLE 
+	      WHERE pid = #{pid}
+        ]]>
+	</delete>
+
+</mapper>
