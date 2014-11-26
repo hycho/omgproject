@@ -18,24 +18,22 @@
 </head>
 
 <body class="home">
-    <!-- Color Bars (above header)-->
-	<div class="color-bar-1"></div>
-    <div class="color-bar-2 color-bg"></div>
-    
-    <div class="container">
-    
-      <div class="row header"><!-- Begin Header -->
-      
-        <!-- Logo
-        ================================================== -->
-        <div class="span5 logo">
-        	<a href="index.htm"><img src="${resourcesPath}/img/piccolo-logo.png" alt="" /></a>
-            <h5>Big Things... Small Packages</h5>
+	<div class="main-black-shadow"></div>
+    <div class="headline">
+        <div class="main-headline">
+            <div class="flexslider">
+              <ul class="slides">
+                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" /></a></li>
+              </ul>
+            </div>
         </div>
-        
-        <!-- Main Navigation
-        ================================================== -->
-        <div class="span7 navigation">
+    </div>
+    
+    <div class="span7 navigation" style="position: absolute; top: 0; left: 0; width: 100%; min-width: 1170px; height: 70px; z-index:2">
             <div class="navbar hidden-phone">
             
             <ul class="nav">
@@ -114,38 +112,8 @@
                 </select>
                 </div>
                 </form>
-
         </div>
-        
-      </div><!-- End Header -->
-     
-    <div class="row headline"><!-- Begin Headline -->
-    
-     	<!-- Slider Carousel
-        ================================================== -->
-        <div class="span8">
-            <div class="flexslider">
-              <ul class="slides">
-                <li><a href="gallery-single.htm"><img src="${resourcesPath}/img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="${resourcesPath}/img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="${resourcesPath}/img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="${resourcesPath}/img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="${resourcesPath}/img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
-              </ul>
-            </div>
-        </div>
-        
-        <!-- Headline Text
-        ================================================== -->
-        <div class="span4">
-        	<h3>Welcome to Piccolo. <br />
-            A Big Theme in a Small Package.</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium vulputate magna sit amet blandit.</p>
-            <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et tortor. In sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.</p>
-            <a href="#"><i class="icon-plus-sign"></i>Read More</a> 
-        </div>
-    </div><!-- End Headline -->
-    
+    <div class="container">
     <div class="row gallery-row"><!-- Begin Gallery Row --> 
       
     	<div class="span12">
@@ -322,8 +290,6 @@
             </h5>
 
         <div id="blogCarousel" class="carousel slide ">
-
-            <!-- Carousel items -->
             <div class="carousel-inner">
 
                  <!-- Blog Item 1 -->
@@ -504,28 +470,33 @@
 <script src="${resourcesPath}/js/jquery.flexslider.js"></script>
 <script src="${resourcesPath}/js/jquery.custom.js"></script>
 <script type="text/javascript">
+
 $(document).ready(function () {
 	$("#btn-blog-next").click(function () {
-  	$('#blogCarousel').carousel('next')
+	  	$('#blogCarousel').carousel('next')
 	});
-  $("#btn-blog-prev").click(function () {
-      $('#blogCarousel').carousel('prev')
-    });
-  $("#btn-client-next").click(function () {
-      $('#clientCarousel').carousel('next')
-    });
-  $("#btn-client-prev").click(function () {
-      $('#clientCarousel').carousel('prev')
-    });
+	
+  	$("#btn-blog-prev").click(function () {
+    	$('#blogCarousel').carousel('prev')
+  	});
+  
+  	$("#btn-client-next").click(function () {
+    	$('#clientCarousel').carousel('next')
+  	});
+  
+  	$("#btn-client-prev").click(function () {
+      	$('#clientCarousel').carousel('prev')
+  	});
 });
 
 $(window).load(function(){
 	$('.flexslider').flexslider({
-  	animation: "slide",
-    slideshow: true,
-    start: function(slider){
-    	$('body').removeClass('loading');
-        }
+	  	animation: "slide",
+	    //slideshow: true,
+	    animationSpeed: 1500,
+	    start: function(slider){
+	    	$('body').removeClass('loading');
+	    }
     });  
 });
 
