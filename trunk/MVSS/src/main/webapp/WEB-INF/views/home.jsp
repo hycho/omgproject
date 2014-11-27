@@ -23,11 +23,60 @@
         <div class="main-headline">
             <div class="flexslider">
               <ul class="slides">
-                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" /></a></li>
+                <li>
+                	<a href="gallery-single.htm">
+                	<img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" />
+                	</a>
+                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
+						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
+							<div class="text-container caption-one" style="max-width: 400px;">
+								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">불한당</h1>
+							</div>
+						</div>
+					</div>
+                </li>
+                <li>
+                	<a href="gallery-single.htm">
+                		<img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" />
+                	</a>
+                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
+						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
+							<div class="text-container caption-one" style="max-width: 400px;">
+								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">니들 오늘 좇됫다.</h1>
+							</div>
+						</div>
+					</div>
+                </li>
+                <li>
+                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" /></a>
+                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
+						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
+							<div class="text-container caption-one" style="max-width: 400px;">
+								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">오늘 점심은 중국집이다.</h1>
+							</div>
+						</div>
+					</div>
+                </li>
+                <li>
+                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" /></a>
+                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
+						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
+							<div class="text-container caption-one" style="max-width: 400px;">
+								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">어? 여기가 아닌가벼</h1>
+							</div>
+						</div>
+					</div>
+                </li>
+                <li>
+                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" /></a>
+                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
+						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
+							<div class="text-container caption-one" style="max-width: 400px;">
+								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">흐..흑화한다</h1>
+							</div>
+						</div>
+					</div>
+                </li>
               </ul>
             </div>
         </div>
