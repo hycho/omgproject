@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD iBatis Mapper 3.0 //EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="authorDao">
+
+	<select id="selectBest5BroadCast" parameterType="java.util.Map" resultType="java.util.List">
+	    SELECT
+	           AUTHOR_CODE, AUTHOR_NM, AUTHOR_DC, CREATE_DT
+	      FROM TB_AUTHORINFO
+	     WHERE 1=1
+	     <if test="searchCondition != null">
+		 	AUTHOR_NM LIKE CONCAT('%' , #{searchKeyword}, '%')
+		 </if>
+	    ORDER BY CREATE_DT DESC
+	    LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+</mapper>                  
