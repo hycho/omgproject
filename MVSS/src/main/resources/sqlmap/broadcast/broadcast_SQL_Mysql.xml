@@ -4,13 +4,15 @@
 <mapper namespace="broadCastDao">
 
 	   <select id="selectBest5BroadCast" parameterType="java.util.Map" resultType="java.util.HashMap">
-		  SELECT cube.CUBE_ID as cubeid, broadcast.CUBE_ID as cubeid2
-      FROM TB_MVSS_CUBE cube, TB_MVSS_BROADCAST broadcast
-      WHERE TYPE_CD = '01'
-      AND cube.CUBE_ID = broadcast.CUBE_ID
-      AND cube.STATUS_CD = '01'
-      ORDER BY cube.RECOMMEND, cube.CREATED_DATE DESC
-      LIMIT 5
+		      SELECT cube.CUBE_ID, cube.TITLE, cube.DESCRIPTION, cube.RECOMMEND, cube.RECOMMEND_CNT,
+          broadcast.BROADCAST_ID, broadcast.CHANNEL, broadcast.TOTAL_VIEWS_CT, broadcast.BROADCAST_INFO,
+          broadcast.OPEN_TIME, broadcast.CLOSE_TIME, broadcast.CLOSE_TIME, broadcast.MAIN_THUMBNAIL, broadcast.SUB_THUMBNAIL
+			    FROM TB_MVSS_CUBE cube, TB_MVSS_BROADCAST broadcast
+			    WHERE TYPE_CD = '01'
+			    AND cube.CUBE_ID = broadcast.CUBE_ID
+			    AND cube.STATUS_CD = '01'
+			    ORDER BY cube.RECOMMEND, cube.CREATED_DATE DESC
+			    LIMIT 5
     </select>
 
 </mapper>                  
