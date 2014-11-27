@@ -1,4 +1,4 @@
-package kr.co.mvss.process.broadcast.core.database.mybatis3;
+package kr.co.mvss.core.database.mybatis3;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
