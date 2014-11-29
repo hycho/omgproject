@@ -5,7 +5,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <c:set var="resourcesPath" value="${pageContext.request.contextPath}/resources/mvss"/>
 
-<html ng-app="mvss-home-app">
+<html ng-app="mvss-drama-view-app">
 <head>
 <title>Home</title>
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -14,12 +14,13 @@
 <link rel="stylesheet" href="${resourcesPath}/css/prettyPhoto.css" />
 <link rel="stylesheet" href="${resourcesPath}/css/flexslider.css" />
 <link rel="stylesheet" href="${resourcesPath}/css/custom-styles.css">
+
 </head>
 
 <body class="home">
 	<div class="main-black-shadow"></div>
     <div class="headline">
-        <div class="main-headline">
+        <div class="main-headline" ng-controller="ViewSlideCtl">
             <div class="flexslider">
               <ul class="slides">
                 <li>
@@ -34,49 +35,9 @@
 								<p class="flex-caption-p2">피말리는 그녀와 나의 전투가 벌어진다.</p>
 								<p class="flex-caption-p3">사랑했지만 싸울수 밖에 없는 운명.</p>
 								<p class="flex-caption-p4">드디어 그 운명의 종착이 결정된다.</p>
-								<p class="flex-caption-p5">▷지금 보기</p>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm">
-                		<img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" />
-                	</a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">니들 오늘 좇됫다.</h1>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" /></a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">오늘 점심은 중국집이다.</h1>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" /></a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">어? 여기가 아닌가벼</h1>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" /></a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">흐..흑화한다</h1>
+								<p class="flex-caption-p5">
+									<rating ng-model="rate" max="max" readonly="isReadonly"></rating>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -87,85 +48,118 @@
     </div>
     
     <div class="span7 navigation" style="position: absolute; top: 0; left: 0; width: 100%; min-width: 1170px; height: 70px; z-index:2; margin-top:10px;">
-            <div class="navbar hidden-phone">
-            <ul class="nav">
-            <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">Home <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="index.htm">Full Page</a></li>
-                    <li><a href="index-gallery.htm">Gallery Only</a></li>
-                    <li><a href="index-slider.htm">Slider Only</a></li>
-                </ul>
-            </li>
-           <li><a href="features.htm">Features</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="page-full-width.htm">Full Width</a></li>
-                    <li><a href="page-right-sidebar.htm">Right Sidebar</a></li>
-                    <li><a href="page-left-sidebar.htm">Left Sidebar</a></li>
-                    <li><a href="page-double-sidebar.htm">Double Sidebar</a></li>
-                </ul>
-            </li>
-             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Gallery <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="gallery-3col.htm">Gallery 3 Column</a></li>
-                    <li><a href="gallery-4col.htm">Gallery 4 Column</a></li>
-                    <li><a href="gallery-6col.htm">Gallery 6 Column</a></li>
-                    <li><a href="gallery-4col-circle.htm">Gallery 4 Round</a></li>
-                    <li><a href="gallery-single.htm">Gallery Single</a></li>
-                </ul>
-             </li>
-             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Blog <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="blog-style1.htm">Blog Style 1</a></li>
-                    <li><a href="blog-style2.htm">Blog Style 2</a></li>
-                    <li><a href="blog-style3.htm">Blog Style 3</a></li>
-                    <li><a href="blog-style4.htm">Blog Style 4</a></li>
-                    <li><a href="blog-single.htm">Blog Single</a></li>
-                </ul>
-             </li>
-             <li><a href="page-contact.htm">Contact</a></li>
-            </ul>
-           
+	   <div class="navbar hidden-phone">
+	   <ul class="nav">
+	   <li class="dropdown active">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">Home <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	            <li><a href="index.htm">Full Page</a></li>
+	            <li><a href="index-gallery.htm">Gallery Only</a></li>
+	            <li><a href="index-slider.htm">Slider Only</a></li>
+	        </ul>
+	    </li>
+	   <li><a href="features.htm">Features</a></li>
+	   <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	            <li><a href="page-full-width.htm">Full Width</a></li>
+	            <li><a href="page-right-sidebar.htm">Right Sidebar</a></li>
+	            <li><a href="page-left-sidebar.htm">Left Sidebar</a></li>
+	            <li><a href="page-double-sidebar.htm">Double Sidebar</a></li>
+	        </ul>
+	    </li>
+	    <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Gallery <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	            <li><a href="gallery-3col.htm">Gallery 3 Column</a></li>
+	            <li><a href="gallery-4col.htm">Gallery 4 Column</a></li>
+	            <li><a href="gallery-6col.htm">Gallery 6 Column</a></li>
+	            <li><a href="gallery-4col-circle.htm">Gallery 4 Round</a></li>
+	            <li><a href="gallery-single.htm">Gallery Single</a></li>
+	        </ul>
+	    </li>
+	    <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Blog <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	            <li><a href="blog-style1.htm">Blog Style 1</a></li>
+	            <li><a href="blog-style2.htm">Blog Style 2</a></li>
+	            <li><a href="blog-style3.htm">Blog Style 3</a></li>
+	            <li><a href="blog-style4.htm">Blog Style 4</a></li>
+	            <li><a href="blog-single.htm">Blog Single</a></li>
+	        </ul>
+	    </li>
+	    <li><a href="page-contact.htm">Contact</a></li>
+	    </ul>
+	   
+	    </div>
+	
+	    <!-- Mobile Nav
+	    ================================================== -->
+	    <form action="#" id="mobile-nav" class="visible-phone">
+	        <div class="mobile-nav-select">
+	        <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+	            <option value="">Navigate...</option>
+	            <option value="index.htm">Home</option>
+	                <option value="index.htm">- Full Page</option>
+	                <option value="index-gallery.htm">- Gallery Only</option>
+	                <option value="index-slider.htm">- Slider Only</option>
+	            <option value="features.htm">Features</option>
+	            <option value="page-full-width.htm">Pages</option>
+	                <option value="page-full-width.htm">- Full Width</option>
+	                <option value="page-right-sidebar.htm">- Right Sidebar</option>
+	                <option value="page-left-sidebar.htm">- Left Sidebar</option>
+	                <option value="page-double-sidebar.htm">- Double Sidebar</option>
+	            <option value="gallery-4col.htm">Gallery</option>
+	                <option value="gallery-3col.htm">- 3 Column</option>
+	                <option value="gallery-4col.htm">- 4 Column</option>
+	                <option value="gallery-6col.htm">- 6 Column</option>
+	                <option value="gallery-4col-circle.htm">- Gallery 4 Col Round</option>
+	                <option value="gallery-single.htm">- Gallery Single</option>
+	            <option value="blog-style1.htm">Blog</option>
+	                <option value="blog-style1.htm">- Blog Style 1</option>
+	                <option value="blog-style2.htm">- Blog Style 2</option>
+	                <option value="blog-style3.htm">- Blog Style 3</option>
+	                <option value="blog-style4.htm">- Blog Style 4</option>
+	                <option value="blog-single.htm">- Blog Single</option>
+	            <option value="page-contact.htm">Contact</option>
+	        </select>
+	        </div>
+		</form>
+    </div>
+        
+    <div class="container">
+    
+    <div class="row">
+
+        <!-- Gallery Items
+        ================================================== --> 
+        <div class="span12 gallery-single">
+
+            <div class="row">
+                <div class="span6">
+                    <img src="${pageContext.request.contextPath}/resources/mvss/img/gallery/gallery-img-1-full.jpg" class="align-left thumbnail" alt="image">
+                </div>
+                <div class="span6">
+                    <h2>Custom Illustration</h2>
+                    <p class="lead">For an international ad campaign. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
+
+                    <ul class="project-info">
+                        <li><h6>Date:</h6> 09/12/15</li>
+                        <li><h6>Client:</h6> John Doe, Inc.</li>
+                        <li><h6>Services:</h6> Design, Illustration</li>
+                        <li><h6>Art Director:</h6> Jane Doe</li>
+                        <li><h6>Designer:</h6> Jimmy Doe</li>
+                    </ul>
+
+                    <button class="btn btn-inverse pull-left" type="button">Visit Website</button>
+                    <a href="#" class="pull-right"><i class="icon-arrow-left"></i>Back to Gallery</a>
+                </div>
             </div>
 
-            <!-- Mobile Nav
-            ================================================== -->
-            <form action="#" id="mobile-nav" class="visible-phone">
-                <div class="mobile-nav-select">
-                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-                    <option value="">Navigate...</option>
-                    <option value="index.htm">Home</option>
-                        <option value="index.htm">- Full Page</option>
-                        <option value="index-gallery.htm">- Gallery Only</option>
-                        <option value="index-slider.htm">- Slider Only</option>
-                    <option value="features.htm">Features</option>
-                    <option value="page-full-width.htm">Pages</option>
-                        <option value="page-full-width.htm">- Full Width</option>
-                        <option value="page-right-sidebar.htm">- Right Sidebar</option>
-                        <option value="page-left-sidebar.htm">- Left Sidebar</option>
-                        <option value="page-double-sidebar.htm">- Double Sidebar</option>
-                    <option value="gallery-4col.htm">Gallery</option>
-                        <option value="gallery-3col.htm">- 3 Column</option>
-                        <option value="gallery-4col.htm">- 4 Column</option>
-                        <option value="gallery-6col.htm">- 6 Column</option>
-                        <option value="gallery-4col-circle.htm">- Gallery 4 Col Round</option>
-                        <option value="gallery-single.htm">- Gallery Single</option>
-                    <option value="blog-style1.htm">Blog</option>
-                        <option value="blog-style1.htm">- Blog Style 1</option>
-                        <option value="blog-style2.htm">- Blog Style 2</option>
-                        <option value="blog-style3.htm">- Blog Style 3</option>
-                        <option value="blog-style4.htm">- Blog Style 4</option>
-                        <option value="blog-single.htm">- Blog Single</option>
-                    <option value="page-contact.htm">Contact</option>
-                </select>
-                </div>
-                </form>
-        </div>
-    <div class="container">
+        </div><!-- End gallery-single-->
+
+    </div><!-- End container row -->
     
     <div class="row gallery-row"><!-- Begin Gallery Row --> 
       
@@ -185,7 +179,7 @@
                     <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
                         <span class="gallery-hover-4col hidden-phone hidden-tablet">
                             <span class="gallery-icons">
-                                <a href="${contextPath}/drama/view" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
+                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
                                 <a href="gallery-single.htm" class="item-details-link"></a>
                             </span>
                         </span>
@@ -475,8 +469,10 @@
 <script src="${resourcesPath}/js/jquery.flexslider.js"></script>
 <script src="${resourcesPath}/js/jquery.custom.js"></script>
 <script src="${resourcesPath}/js/angular.min.js"></script>
+<script src="${resourcesPath}/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+
 <!-- mvss scripts -->
-<script src="${resourcesPath}/angjs/mvss-home.js"></script>
+<script src="${resourcesPath}/angjs/mvss-drama.js"></script>
 
 <script type="text/javascript">
 

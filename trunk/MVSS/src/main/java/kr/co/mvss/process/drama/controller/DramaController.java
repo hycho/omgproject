@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
+@RequestMapping("/drama")
 public class DramaController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(DramaController.class);
@@ -48,10 +49,18 @@ public class DramaController {
 	 */
 	@RequestMapping(value = "/selectBest5Drama", method = RequestMethod.GET)
 	public @ResponseBody List<Map<String, Object>> selectBest5Drama(HttpServletRequest request) throws Exception {
-		logger.info("Call Best5Drama");
+		logger.info("Call Drama Best5Drama");
 		Map<String, Object> params = CommonUtility.transDataMap(request);
 		
 		return dramaService.selectBest5Drama(params);
+	}
+	
+	@RequestMapping(value = "/view", method = RequestMethod.GET)
+	public String view(HttpServletRequest request) throws Exception {
+		logger.info("Call Drama Best5Drama");
+		Map<String, Object> params = CommonUtility.transDataMap(request);
+		
+		return "/drama/view";
 	}
 	
 }

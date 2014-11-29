@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service("dramaService")
 public class DramaServiceImpl implements DramaService {
     
-	@Resource(name="broadCastDao")
+	@Resource(name="dramaDao")
   private DramaDaoImpl dramaDao;
 
   public List<Map<String, Object>> selectBest5Drama(Map<String, Object> params) throws Exception {
