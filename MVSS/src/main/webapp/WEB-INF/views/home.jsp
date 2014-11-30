@@ -24,7 +24,7 @@
               <ul class="slides">
                 <li>
                 	<a href="gallery-single.htm">
-                		<img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" />
+                		<img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" class="main-header-img"/>
                 	</a>
                 	<div class="flex-caption">
 						<div class="caption-container">
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                 	<a href="gallery-single.htm">
-                		<img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" />
+                		<img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" class="main-header-img"/>
                 	</a>
                 	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
 						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
@@ -52,7 +52,7 @@
 					</div>
                 </li>
                 <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" /></a>
+                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" class="main-header-img"/></a>
                 	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
 						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
 							<div class="text-container caption-one" style="max-width: 400px;">
@@ -62,7 +62,7 @@
 					</div>
                 </li>
                 <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" /></a>
+                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" class="main-header-img"/></a>
                 	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
 						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
 							<div class="text-container caption-one" style="max-width: 400px;">
@@ -72,7 +72,7 @@
 					</div>
                 </li>
                 <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" /></a>
+                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" class="main-header-img"/></a>
                 	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
 						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
 							<div class="text-container caption-one" style="max-width: 400px;">
