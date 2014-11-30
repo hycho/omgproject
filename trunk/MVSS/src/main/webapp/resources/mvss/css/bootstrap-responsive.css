@@ -808,6 +808,7 @@
   .row,
   .thumbnails {
     margin-left: 0;
+    text-align:center;
   }
   .thumbnails > li {
     float: none;
