@@ -21,10 +21,10 @@
     <div class="headline">
         <div class="main-headline">
             <div class="flexslider">
-              <ul class="slides">
-                <li>
+              <ul class="slides" ng-controller="MainSlideCtl" ng-init="init()">
+                <li ng-repeat="slide in mainSlides">
                 	<a href="gallery-single.htm">
-                		<img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" class="main-header-img"/>
+                		<img id="flexMainImg" src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" class="main-header-img flexMainImg"/>
                 	</a>
                 	<div class="flex-caption">
 						<div class="caption-container">
@@ -35,48 +35,6 @@
 								<p class="flex-caption-p3">사랑했지만 싸울수 밖에 없는 운명.</p>
 								<p class="flex-caption-p4">드디어 그 운명의 종착이 결정된다.</p>
 								<p class="flex-caption-p5">▷지금 보기</p>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm">
-                		<img src="http://img.ental.com/main/54743c46df747.jpg" alt="slider" class="main-header-img"/>
-                	</a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">니들 오늘 좇됫다.</h1>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c7a4cbed.jpg" alt="slider" class="main-header-img"/></a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">오늘 점심은 중국집이다.</h1>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743c9dd2c86.jpg" alt="slider" class="main-header-img"/></a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">어? 여기가 아닌가벼</h1>
-							</div>
-						</div>
-					</div>
-                </li>
-                <li>
-                	<a href="gallery-single.htm"><img src="http://img.ental.com/main/54743cf25166c.jpg" alt="slider" class="main-header-img"/></a>
-                	<div class="flex-caption" style="width: 100%; max-width: 1600px;margin: 0 auto;position: absolute;top: 10%; z-index: 100; top: 30%;">
-						<div class="caption-container" style="padding-left: 10%; position: relative;width: 100%;margin: 0 auto;">
-							<div class="text-container caption-one" style="max-width: 400px;">
-								<h1 style="color:#FFFFFF; text-shadow: 0 1px 2px #000;font-size: 40px;font-weight: 600;">흐..흑화한다</h1>
 							</div>
 						</div>
 					</div>
@@ -475,6 +433,8 @@
 <script src="${resourcesPath}/js/jquery.flexslider.js"></script>
 <script src="${resourcesPath}/js/jquery.custom.js"></script>
 <script src="${resourcesPath}/js/angular.min.js"></script>
+<!-- common.jsp -->
+<%@ include file="/WEB-INF/views/common/common.jsp" %>
 <!-- mvss scripts -->
 <script src="${resourcesPath}/angjs/mvss-home.js"></script>
 
@@ -496,16 +456,6 @@ $(document).ready(function () {
   	$("#btn-client-prev").click(function () {
       	$('#clientCarousel').carousel('prev')
   	});
-});
-
-$(window).load(function(){
-	$('.flexslider').flexslider({
-	  	animation: "slide",
-	    animationSpeed: 1500,
-	    start: function(slider){
-	    	$('body').removeClass('loading');
-	    }
-    });  
 });
 
 </script>
