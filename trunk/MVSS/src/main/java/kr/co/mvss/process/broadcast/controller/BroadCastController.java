@@ -1,5 +1,6 @@
 package kr.co.mvss.process.broadcast.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -46,11 +47,16 @@ public class BroadCastController {
 	 * @return
 	 * @throws Exception 
 	 */
-	@RequestMapping(value = "/selectBest5BroadCast", method = RequestMethod.GET)
-	public @ResponseBody List<Map<String, Object>> selectBest5BroadCast(HttpServletRequest request) throws Exception {
+	@RequestMapping(value = "/selectBest5BroadCast", method = {RequestMethod.GET, RequestMethod.POST})
+	public @ResponseBody Map<String, Object> selectBest5BroadCast(HttpServletRequest request) throws Exception {
 		logger.info("Call Best5Drama");
+		Map<String, Object> result = new HashMap<String, Object>();
 		Map<String, Object> params = CommonUtility.transDataMap(request);
 		
-		return broadCastService.selectBest5BroadCast(params);
+		List<Map<String, Object>> data = broadCastService.selectBest5BroadCast(params);
+		
+		result.put("data", data);
+		
+		return result;
 	}
 }
