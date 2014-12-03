@@ -5,6 +5,6 @@ import java.util.Map;
 
 public interface DramaDao {
 	
-	public List<Map<String, Object>> selectBest5Drama(Map<String, Object> params) throws Exception;
+	public List<Map<String, Object>> selectBest8Drama(Map<String, Object> params) throws Exception;
 	
 }

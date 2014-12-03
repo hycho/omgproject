@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD iBatis Mapper 3.0 //EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 
-<mapper namespace="broadCastDao">
+<mapper namespace="dramaDao">
 
-	<select id="selectBest5BroadCast" parameterType="java.util.Map" resultType="java.util.HashMap">
+	<select id="selectBest8Drama" parameterType="java.util.Map" resultType="java.util.HashMap">
 		SELECT cube.CUBE_ID, cube.TITLE, cube.DESCRIPTION, cube.RECOMMEND, cube.RECOMMEND_CNT,
         drama.DRAMA_ID, drama.CHANNEL, drama.TOTAL_VIEWS_CT, drama.DRAMA_INFO,
         drama.OPEN_TIME, drama.CLOSE_TIME, drama.CLOSE_TIME, drama.MAIN_THUMBNAIL, drama.SUB_THUMBNAIL,
         drama.CAPTION1, drama.CAPTION2, drama.CAPTION3, drama.CAPTION4, drama.CAPTION5 
 		FROM TB_MVSS_CUBE cube, TB_MVSS_DRAMA drama
-		WHERE cube.CUBE_ID = drama.CUBE_ID
+		WHERE cube.TYPE_CD = '01' 
+		AND cube.CUBE_ID = drama.CUBE_ID
 		AND cube.STATUS_CD = '01'
 		ORDER BY cube.RECOMMEND, cube.CREATED_DATE DESC
-		LIMIT 5
+		LIMIT 8
     </select>
 
 </mapper>                  

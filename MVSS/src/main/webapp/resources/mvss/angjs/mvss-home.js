@@ -1,6 +1,6 @@
 var homeModule = angular.module('mvss-home-app', []);
 
-homeModule.controller('MainSlideCtl', ['$scope', '$log', '$http', '$location', function ($scope, $log, $http, $location) {
+homeModule.controller('MainSlideCtl', ['$scope', '$log', '$http', function ($scope, $log, $http) {
 	// main slide 모델 데이터
 	$scope.mainSlides = [];
 	
@@ -9,16 +9,16 @@ homeModule.controller('MainSlideCtl', ['$scope', '$log', '$http', '$location', f
 		$http.post(contextPath + "/selectBest5BroadCast", null, {
 		}).success(function(response, status){
 			$scope.mainSlides = response.data;
-			$scope.$apply();
-			flexSlideInit();
+			setTimeout(function() {
+			    $scope.$apply(function(){
+			    	flexSlideInit();
+			    },1);
+			});
+			
 		}).error(function(data, status){
 			console.log(data);
 			console.log(status);
 		});
-	};
-	
-	$scope.init = function () {
-		$scope.selectBest5BroadCast();
 	};
 	
 	var flexSlideInit = function() {
@@ -31,4 +31,30 @@ homeModule.controller('MainSlideCtl', ['$scope', '$log', '$http', '$location', f
 		});
 	};
 	
+	angular.element(document).ready(function () {
+		$scope.selectBest5BroadCast();
+	});
+	
+}]);
+
+homeModule.controller('MainBest8DramaCtl', ['$scope', '$log', '$http', function ($scope, $log, $http) {
+	$scope.best8Drama = [];
+	
+	$scope.selectBest8Drama = function () {
+		$http.post(contextPath + "/drama/selectBest8Drama", null, {
+		}).success(function(response, status){
+			$scope.best8Drama = response;
+			setTimeout(function() {
+			    $scope.$apply(function(){
+			    },1);
+			});
+		}).error(function(data, status){
+			console.log(data);
+			console.log(status);
+		});
+	};
+	
+	angular.element(document).ready(function () {
+		$scope.selectBest8Drama();
+	});
 }]);

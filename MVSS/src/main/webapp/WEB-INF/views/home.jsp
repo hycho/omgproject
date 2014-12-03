@@ -21,19 +21,19 @@
     <div class="headline">
         <div class="main-headline">
             <div class="flexslider">
-              <ul class="slides" ng-controller="MainSlideCtl" ng-init="init()">
-                <li ng-repeat="slide in mainSlides">
+              <ul class="slides" ng-controller="MainSlideCtl">
+                <li ng-if="mainSlides.length > 0" ng-repeat="slide in mainSlides">
                 	<a href="gallery-single.htm">
-                		<img id="flexMainImg" src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" class="main-header-img flexMainImg"/>
+                		<img id="flexMainImg" src="{{slide.MAIN_THUMBNAIL}}" alt="slider" class="main-header-img flexMainImg"/>
                 	</a>
                 	<div class="flex-caption">
 						<div class="caption-container">
 							<div class="text-container caption-one">
-								<h1 class="flex-caption-h1">불한당</h1>
-								<p class="flex-caption-p1"><필살기></p>
-								<p class="flex-caption-p2">피말리는 그녀와 나의 전투가 벌어진다.</p>
-								<p class="flex-caption-p3">사랑했지만 싸울수 밖에 없는 운명.</p>
-								<p class="flex-caption-p4">드디어 그 운명의 종착이 결정된다.</p>
+								<h1 class="flex-caption-h1">{{slide.CAPTION1}}</h1>
+								<p class="flex-caption-p1">{{slide.CAPTION2}}</p>
+								<p class="flex-caption-p2">{{slide.CAPTION3}}</p>
+								<p class="flex-caption-p3">{{slide.CAPTION4}}</p>
+								<p class="flex-caption-p4">{{slide.CAPTION5}}</p>
 								<p class="flex-caption-p5">▷지금 보기</p>
 							</div>
 						</div>
@@ -126,118 +126,26 @@
     <div class="container">
     
     <div class="row gallery-row"><!-- Begin Gallery Row --> 
-      
     	<div class="span12">
             <h5 class="title-bg">[추천] 
                 <small>드라마 인기차트 Best8 </small>
                 <button class="btn btn-mini btn-inverse hidden-phone" type="button">더보기</button>
             </h5>
-    	
-        <!-- Gallery Thumbnails
-        ================================================== -->
-
-            <div class="row clearfix no-margin">
-            <ul class="gallery-post-grid holder">
-
-                    <!-- Gallery Item 1 -->
-                    <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
+            <div class="row clearfix no-margin" ng-controller="MainBest8DramaCtl">
+            	<ul class="gallery-post-grid holder">
+                    <li class="span3 gallery-item" data-id="id-1" data-type="illustration" ng-repeat="drama in best8Drama">
                         <span class="gallery-hover-4col hidden-phone hidden-tablet">
                             <span class="gallery-icons">
                                 <a href="${contextPath}/drama/view" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
                                 <a href="gallery-single.htm" class="item-details-link"></a>
                             </span>
                         </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
+                        <a href="gallery-single.htm"><img src="{{drama.SUB_THUMBNAIL}}" alt="Gallery" class="main-gallery-col4"></a>
                         <span class="project-details"><a href="gallery-single.htm">우리는 형제입니다.</a>티격대던 형제는 로또 복권에 같이 당첨되는데...</span>
                     </li>
-
-                    <!-- Gallery Item 2 -->
-                    <li class="span3 gallery-item" data-id="id-2" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="gallery-single.htm" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">3 Color Poster Design</a>For a regional festival event.</span>
-                    </li>
-
-                    <!-- Gallery Item 3 -->
-                    <li class="span3 gallery-item" data-id="id-3" data-type="web">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">Ink Pen Illustration</a>Created for a best selling children's book.</span>
-                    </li>
-
-                    <!-- Gallery Item 4 -->
-                    <li class="span3 gallery-item" data-id="id-4" data-type="video">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="gallery-single.htm" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">Custom Illustration</a>For an international add campaign.</span>
-                    </li>
-
-                    <!-- Gallery Item 5 -->
-                    <li class="span3 gallery-item" data-id="id-5" data-type="web illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="gallery-single.htm" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">Icon1 Design</a>Classic retro style illustration.</span>
-                    </li>
-
-                    <!-- Gallery Item 6 -->
-                    <li class="span3 gallery-item" data-id="id-6" data-type="illustration design">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="gallery-single.htm" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">Animation Cell</a>Creative storyboard illustration</span>
-                    </li>
-
-                    <!-- Gallery Item 7 -->
-                    <li class="span3 gallery-item" data-id="id-7" data-type="design">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="gallery-single.htm" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">Poster Ad Campaign</a>Regional ad for a local company.</span>
-                    </li>
-
-                    <!-- Gallery Item 8 -->
-                    <li class="span3 gallery-item" data-id="id-8" data-type="web video">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                            <span class="gallery-icons">
-                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
-                                <a href="gallery-single.htm" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="gallery-single.htm"><img src="http://img.ental.com/resize_216x311/movie/04/61/74_p1.jpg" alt="Gallery" class="main-gallery-col4"></a>
-                        <span class="project-details"><a href="gallery-single.htm">Magazine Ad</a>For an international add campaign.</span>
-                    </li>
-                </ul>
-                </div>
+	 	       </ul>
             </div>
- 
+    	</div>
     </div><!-- End Gallery Row -->
     
     <div class="row"><!-- Begin Bottom Section -->
@@ -432,7 +340,8 @@
 <script src="${resourcesPath}/js/jquery.prettyPhoto.js"></script>
 <script src="${resourcesPath}/js/jquery.flexslider.js"></script>
 <script src="${resourcesPath}/js/jquery.custom.js"></script>
-<script src="${resourcesPath}/js/angular.min.js"></script>
+<script src="${resourcesPath}/js/angular.js"></script>
+
 <!-- common.jsp -->
 <%@ include file="/WEB-INF/views/common/common.jsp" %>
 <!-- mvss scripts -->

@@ -47,12 +47,12 @@ public class DramaController {
 	 * @return
 	 * @throws Exception 
 	 */
-	@RequestMapping(value = "/selectBest5Drama", method = RequestMethod.GET)
+	@RequestMapping(value = "/selectBest8Drama", method = {RequestMethod.GET, RequestMethod.POST})
 	public @ResponseBody List<Map<String, Object>> selectBest5Drama(HttpServletRequest request) throws Exception {
 		logger.info("Call Drama Best5Drama");
 		Map<String, Object> params = CommonUtility.transDataMap(request);
 		
-		return dramaService.selectBest5Drama(params);
+		return dramaService.selectBest8Drama(params);
 	}
 	
 	@RequestMapping(value = "/view", method = RequestMethod.GET)

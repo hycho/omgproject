@@ -12,8 +12,8 @@ import org.springframework.stereotype.Repository;
 public class DramaDaoImpl extends BaseSqlSessionDaoSupport implements DramaDao{
 
 	@Override
-	public List<Map<String, Object>> selectBest5Drama(Map<String, Object> params) throws Exception {
-		return getSqlSession().selectList("dramaDao.selectBest5Drama", params);
+	public List<Map<String, Object>> selectBest8Drama(Map<String, Object> params) throws Exception {
+		return getSqlSession().selectList("dramaDao.selectBest8Drama", params);
 	}
     
 }
