@@ -24,7 +24,7 @@
               <ul class="slides" ng-controller="MainSlideCtl">
                 <li ng-if="mainSlides.length > 0" ng-repeat="slide in mainSlides">
                 	<a href="gallery-single.htm">
-                		<img id="flexMainImg" src="{{slide.MAIN_THUMBNAIL}}" alt="slider" class="main-header-img flexMainImg"/>
+                		<img id="flexMainImg" actual-src="{{slide.MAIN_THUMBNAIL}}" src="" alt="slider" class="main-header-img flexMainImg"/>
                 	</a>
                 	<div class="flex-caption">
 						<div class="caption-container">
@@ -140,7 +140,7 @@
                                 <a href="gallery-single.htm" class="item-details-link"></a>
                             </span>
                         </span>
-                        <a href="gallery-single.htm"><img src="{{drama.SUB_THUMBNAIL}}" alt="Gallery" class="main-gallery-col4"></a>
+                        <a href="gallery-single.htm"><img actual-src="{{drama.SUB_THUMBNAIL}}" alt="Gallery" class="main-gallery-col4"></a>
                         <span class="project-details"><a href="gallery-single.htm">우리는 형제입니다.</a>티격대던 형제는 로또 복권에 같이 당첨되는데...</span>
                     </li>
 	 	       </ul>
@@ -345,6 +345,7 @@
 <!-- common.jsp -->
 <%@ include file="/WEB-INF/views/common/common.jsp" %>
 <!-- mvss scripts -->
+<script src="${resourcesPath}/angjs/mvss-common.js"></script>
 <script src="${resourcesPath}/angjs/mvss-home.js"></script>
 
 <script type="text/javascript">

@@ -1,4 +1,4 @@
-var homeModule = angular.module('mvss-home-app', []);
+var homeModule = angular.module('mvss-home-app', ['commonApp']);
 
 homeModule.controller('MainSlideCtl', ['$scope', '$log', '$http', function ($scope, $log, $http) {
 	// main slide 모델 데이터

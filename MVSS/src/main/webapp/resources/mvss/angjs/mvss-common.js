@@ -2,6 +2,7 @@ var commonApp = angular.module('commonApp', []);
 
 angular.module('commonApp', []).directive('actualSrc', function () {
     return{
+    	restrict: "A",
         link: function postLink(scope, element, attrs) {
             attrs.$observe('actualSrc', function(newVal, oldVal){
                  if(newVal != undefined){
