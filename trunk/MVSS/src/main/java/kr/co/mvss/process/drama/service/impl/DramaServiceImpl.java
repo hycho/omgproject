@@ -16,8 +16,8 @@ public class DramaServiceImpl implements DramaService {
 	@Resource(name="dramaDao")
   private DramaDaoImpl dramaDao;
 
-  public List<Map<String, Object>> selectBest5Drama(Map<String, Object> params) throws Exception {
-	  return dramaDao.selectBest5Drama(params);
+  public List<Map<String, Object>> selectBest8Drama(Map<String, Object> params) throws Exception {
+	  return dramaDao.selectBest8Drama(params);
     }
           
 }
