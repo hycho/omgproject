@@ -15,5 +15,24 @@
 		ORDER BY cube.RECOMMEND, cube.CREATED_DATE DESC
 		LIMIT 8
     </select>
+    
+    <select id="selectDramaById" parameterType="java.util.Map" resultType="java.util.HashMap">
+		SELECT cube.CUBE_ID, cube.TITLE, cube.DESCRIPTION, cube.RECOMMEND, cube.RECOMMEND_CNT,
+        drama.DRAMA_ID, drama.CHANNEL, drama.TOTAL_VIEWS_CT, drama.DRAMA_INFO,
+        drama.START_DAY, drama.START_TIME, drama.OPEN_TIME, drama.CLOSE_TIME, drama.CLOSE_TIME,
+        drama.MAIN_THUMBNAIL, drama.SUB_THUMBNAIL, drama.CAPTION1, drama.CAPTION2, drama.CAPTION3,
+        drama.CAPTION4, drama.CAPTION5 
+		FROM TB_MVSS_CUBE cube, TB_MVSS_DRAMA drama
+		WHERE cube.CUBE_ID = drama.CUBE_ID
+		AND cube.TYPE_CD = '01' 
+		AND cube.STATUS_CD = '01'
+		AND cube.CUBE_ID = #{cubeId}
+    </select>
+    
+    <select id="selectDramaTags" parameterType="java.util.Map" resultType="java.util.HashMap">
+		SELECT TAG_ID, CONTENT_ID, KEYWORD, TYPE_CD, CONTENT_TYPE_CD 
+		FROM TB_MVSS_TAGS
+		WHERE CONTENT_ID = #{cubeId}
+    </select>
 
 </mapper>                  

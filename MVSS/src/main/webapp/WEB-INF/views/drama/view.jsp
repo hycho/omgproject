@@ -23,21 +23,21 @@
 		<div class="main-headline" ng-controller="ViewSlideCtl">
 			<div class="flexslider">
 				<ul class="slides">
-					<li><a href="gallery-single.htm"> <img src="http://img.ental.com/main/54743cc6787ab.jpg" alt="slider" class="main-header-img" />
+					<li><a href="gallery-single.htm"> <img src="${drama[0].MAIN_THUMBNAIL}" alt="slider" class="main-header-img" />
 					</a>
 						<div class="flex-caption">
 							<div class="caption-container">
 								<div class="text-container caption-one">
-									<h1 class="flex-caption-h1">불한당</h1>
+									<h1 class="flex-caption-h1">${drama[0].TITLE}</h1>
 									<p class="flex-caption-p1">
-										<필살기>
+										${drama[0].CAPTION1}
 									</p>
-									<p class="flex-caption-p2">피말리는 그녀와 나의 전투가 벌어진다.</p>
-									<p class="flex-caption-p3">사랑했지만 싸울수 밖에 없는 운명.</p>
-									<p class="flex-caption-p4">드디어 그 운명의 종착이 결정된다.</p>
+									<p class="flex-caption-p2">${drama[0].CAPTION2}</p>
+									<p class="flex-caption-p3">${drama[0].CAPTION3}</p>
+									<p class="flex-caption-p4">${drama[0].CAPTION4}</p>
 									<p class="flex-caption-p5">
 										<rating ng-model="rate" max="max" readonly="isReadonly"></rating>
-										7.9점 50명 참여
+										${drama[0].RECOMMEND}점 ${drama[0].RECOMMEND_CNT}명 참여
 									</p>
 								</div>
 							</div>
@@ -118,25 +118,29 @@
 			</div>
 		</form>
 	</div>
-
 	<div class="container">
 		<div class="row">
 			<div class="span12 gallery-single">
 				<div class="row">
 					<div class="span3">
-						<img src="http://img.ental.com/resize_216x311/movie/04/55/80_p1.jpg" class="align-left thumbnail" alt="image">
+						<img src="${drama[0].SUB_THUMBNAIL}" class="align-left thumbnail" alt="image">
 					</div>
 					<div class="span9">
-						<h2>불한당</h2>
-						<p class="lead view-second-title">어린 시절 고아원에서 생이별한 후 30년 만에 극적 상봉에 성공한 상연과 하연 형제!</p>
-						<p class="view-title-p">늦었다가는 귀찮은 일이 생기니, 오늘도 전속력으로 매점을 향해 달린다..</p>
-						<p class="view-title-p">늦었다가는 귀찮은 일이 생기니, 오늘도 전속력으로 매점을 향해 달린다..</p>
-						<p class="view-title-p">늦었다가는 귀찮은 일이 생기니, 오늘도 전속력으로 매점을 향해 달린다..</p>
+						<h2>${drama[0].TITLE}</h2>
+						<p class="lead view-second-title">${drama[0].DESCRIPTION}</p>
 						<ul class="project-info">
-							<li><h6>개요:</h6> <a>코미디</a>, <a>드라마</a> | 2013.12.11 개봉 | 한국 | 12세 관람가 | 120분</li>
-							<li><h6>감독:</h6> 존슨</li>
-							<li><h6>출현:</h6> <a>존슨</a>, <a>뻑가</a></li>
-							<li><h6>파일정보</h6> <a>[HD] 1280X720(1.6GB)</a>, <a>[Mobile] 800X450(1.2GB)</a></li>
+							<li>
+								<c:forEach var="tag" items="${dramaTags}" >
+								<h6>개요:</h6>
+								<c:if test="${tag.TYPE_CD==01}" >
+								<a class="tag-area">${tag.KEYWORD}</a>
+								</c:if>
+								| ${drama[0].CHANNEL} | 방송시간(${drama[0].START_TIME}) | 총 ${drama[0].TOTAL_VIEWS_CT}화 | ${drama[0].OPEN_TIME} ~ ${drama[0].CLOSE_TIME}
+								<li><h6>감독:</h6> 존슨</li>
+								<li><h6>출현:</h6> <a>존슨</a>, <a>뻑가</a></li>
+								<li><h6>파일정보</h6> <a>[HD] 1280X720(1.6GB)</a>, <a>[Mobile] 800X450(1.2GB)</a>
+								</c:forEach>
+							</li>
 						</ul>
 						<button class="btn btn-inverse pull-left" type="button">다운로드</button>
 						<a href="#" class="pull-right"><i class="icon-arrow-left"></i>Back to Gallery</a>
@@ -151,7 +155,7 @@
 				<!-- Repeat modal left video area -->
 				<div class="repeat-left-video left-video-view">
 					<div class="repeat-left-video-body left-video-view">
-						<iframe class="left-video-view" style="height: 300px;" frameborder="0" id="ytplayer" src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"></iframe>
+						<iframe class="left-video-view" style="height: 300px;" frameborder="0" id="ytplayer" src="http://www.tudou.com/programs/view/html5embed.action?code=EKuM6BQbhSI&resourceId=0_06_05_99"></iframe>
 						<!-- <div id="modalPlayer"></div> -->
 					</div>
 				</div>
@@ -170,17 +174,17 @@
 						</span>
 					</div>
 					<ol class="repeat-right-video-body right-view-list">
-						<li ng-context-menu="menuOptions" id="vlist{{$index}}" attrIndex="{{$index}}" attrSeq="{{video.SEQ}}" class="repeat-right-video-row" ng-mouseover="listOver($event)" ng-mouseleave="listLeave($event)" ng-click="listClick($event,$index,video.YOUTUBEID)" ng-repeat="video in videos">
+						<li class="repeat-right-video-row">
 							<span class="red-triangle display-hide"> ▶ </span>
-							<span class="list-number display-show"> {{$index+1}} </span>  
+							<span class="list-number display-show">  </span>  
 							<a class="repeat-right-video-link" href="#"> 
 								<span class="repeat-right-video-thumb">
-									<img ng-src="{{video.THUMBURL}}" alt="미리보기 이미지" width="64" />
+									<img ng-src="http://img.ental.com/resize_550x330/content/5/c/5c4df22543b247b18e9b88ebd961a536_5.jpg" alt="미리보기 이미지" width="64" />
 								</span>
 								<div class="repeat-right-video-desc">
-									<h4 class="video-title ellipsis-250">{{video.TITLE}}</h4>
+									<h4 class="video-title ellipsis-250">title</h4>
 									<span class="video-author">
-										<p class="ellipsis-250"> 설명: {{video.DESCRIPTION}}</p> 
+										<p class="ellipsis-250"> 설명: 설명1</p> 
 									</span>
 								</div>
 							</a>
