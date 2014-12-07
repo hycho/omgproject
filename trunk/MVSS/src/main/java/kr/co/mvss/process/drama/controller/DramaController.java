@@ -12,6 +12,7 @@ import kr.co.mvss.util.CommonUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -55,10 +56,20 @@ public class DramaController {
 		return dramaService.selectBest8Drama(params);
 	}
 	
+	/**
+	 * CubeId를 통해 Drama의 상세 정보와 연관 태글르 모두 가져온다.
+	 * @param request
+	 * @param model
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/view", method = RequestMethod.GET)
-	public String view(HttpServletRequest request) throws Exception {
+	public String view(HttpServletRequest request, Model model) throws Exception {
 		logger.info("Call Drama Best5Drama");
 		Map<String, Object> params = CommonUtility.transDataMap(request);
+		
+		model.addAttribute("drama", dramaService.selectDramaById(params));
+		model.addAttribute("dramaTags", dramaService.selectDramaTags(params));
 		
 		return "/drama/view";
 	}

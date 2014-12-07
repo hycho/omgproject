@@ -15,5 +15,15 @@ public class DramaDaoImpl extends BaseSqlSessionDaoSupport implements DramaDao{
 	public List<Map<String, Object>> selectBest8Drama(Map<String, Object> params) throws Exception {
 		return getSqlSession().selectList("dramaDao.selectBest8Drama", params);
 	}
-    
+
+	@Override
+	public List<Map<String, Object>> selectDramaById(Map<String, Object> params) throws Exception {
+		return getSqlSession().selectList("dramaDao.selectDramaById", params);
+	}
+	
+	@Override
+	public List<Map<String, Object>> selectDramaTags(Map<String, Object> params) throws Exception {
+		return getSqlSession().selectList("dramaDao.selectDramaTags", params);
+	}
+
 }

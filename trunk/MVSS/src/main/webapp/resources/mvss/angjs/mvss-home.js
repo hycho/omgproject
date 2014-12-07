@@ -43,6 +43,7 @@ homeModule.controller('MainBest8DramaCtl', ['$scope', '$log', '$http', function 
 	$scope.selectBest8Drama = function () {
 		$http.post(contextPath + "/drama/selectBest8Drama", null, {
 		}).success(function(response, status){
+			console.log(response);
 			$scope.best8Drama = response;
 			setTimeout(function() {
 			    $scope.$apply(function(){

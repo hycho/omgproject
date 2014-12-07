@@ -136,11 +136,11 @@
                     <li class="span3 gallery-item" data-id="id-1" data-type="illustration" ng-repeat="drama in best8Drama">
                         <span class="gallery-hover-4col hidden-phone hidden-tablet">
                             <span class="gallery-icons">
-                                <a href="${contextPath}/drama/view" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
+                                <a href="${resourcesPath}/img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
                                 <a href="gallery-single.htm" class="item-details-link"></a>
                             </span>
                         </span>
-                        <a href="gallery-single.htm"><img actual-src="{{drama.SUB_THUMBNAIL}}" alt="Gallery" class="main-gallery-col4"></a>
+                        <a href="${contextPath}/drama/view?cubeId={{drama.CUBE_ID}}"><img actual-src="{{drama.SUB_THUMBNAIL}}" alt="Gallery" class="main-gallery-col4"></a>
                         <span class="project-details"><a href="gallery-single.htm">우리는 형제입니다.</a>티격대던 형제는 로또 복권에 같이 당첨되는데...</span>
                     </li>
 	 	       </ul>
